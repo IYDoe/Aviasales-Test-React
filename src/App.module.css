@@ -1,0 +1,24 @@
+.container {
+    max-width: 754px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.appContent {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+.appContentLeft {
+    width: 30%;
+    margin: 0 10px;
+}
+.appContentRight {
+    width: 70%;
+    margin: 0 10px;
+}
