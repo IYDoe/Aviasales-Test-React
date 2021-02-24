@@ -9,7 +9,7 @@ export default function CardContainer() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
-
+    console.log(items)
     useEffect(() => {
 
         axios.get('https://front-test.beta.aviasales.ru/search')
@@ -30,6 +30,8 @@ export default function CardContainer() {
             })
     }, [])
 
+
+
     if (error) {
         return <div>Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
@@ -39,13 +41,13 @@ export default function CardContainer() {
             <div>
                 {items.map(item => (
                     <Card
-                        data={item}
                         price={item.price}
+                        logo={item.carrier}
                         segments={item.segments}
-
+                        key={item.index}
+                        stops={item.segments[0].stops.map(val => (val ? <div>{val},</div> : <div>{val}</div>))}
                     />
                 ))}
-
             </div>
         )
     }
