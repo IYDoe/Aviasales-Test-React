@@ -54,7 +54,6 @@ export default function Filter(props) {
                     3 пересадка
                 </label>
             </form>
-
         </div>
     )
 }

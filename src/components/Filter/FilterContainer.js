@@ -1,21 +1,20 @@
-import React, { useState } from 'react'
-import Filter from './Filter'
+// import React, { useState, useEffect } from 'react'
+// import Filter from './Filter'
 
-export default function FilterContainer() {
-    const [checkedItems, setCheckedItems] = useState({})
+// export default function FilterContainer() {
+//     const [checkedItems, setCheckedItems] = useState({})
 
-    const handleChange = (event) => {
-        setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked })
+//     const handleChange = (event) => {
+//         setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked })
+//     }
 
-    }
+//     useEffect(() => {
+//         console.log("checkedItems: ", checkedItems);
+//     }, [checkedItems])
 
-    // useEffect(() => {
-    //     console.log("checkedItems: ", checkedItems);
-    // }, [checkedItems])
-
-    return (
-        <div>
-            <Filter handleChange={handleChange} />
-        </div>
-    )
-}
+//     return (
+//         <div>
+//             <Filter handleChange={handleChange} />
+//         </div>
+//     )
+// }
